@@ -17,4 +17,18 @@ public class RemoveDuplicatesFromSortedArrayIITest {
         int expected = 7;
         assertEquals(expected,RemoveDuplicatesFromSortedArrayII.removeDuplicates(nums));
     }
+
+    @Test
+    public void removeDuplicatesEmptyCase() {
+        int[] nums = {};
+        int expected = 0;
+        assertEquals(expected,RemoveDuplicatesFromSortedArrayII.removeDuplicates(nums));
+    }
+
+    @Test
+    public void removeDuplicatesShortArray() {
+        int[] nums = {1};
+        int expected = 1;
+        assertEquals(expected,RemoveDuplicatesFromSortedArrayII.removeDuplicates(nums));
+    }
 }
