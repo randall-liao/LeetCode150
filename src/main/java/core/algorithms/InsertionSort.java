@@ -1,6 +1,5 @@
 package core.algorithms;
 
-import java.util.Arrays;
 
 public class InsertionSort {
 
@@ -8,13 +7,15 @@ public class InsertionSort {
     if (nums == null || nums.length == 0) {
       return nums;
     }
-    for(int i = 1; i < nums.length; i++) {
+    for (int i = 1; i < nums.length; i++) {
+      int j = i - 1;
       int temp = nums[i];
-      int j = i;
-      while(j > 0 && temp > nums[j - 1]) {
-        // if the element to the right is grater than the one to its left, swap right to the left
-
+      while (j >= 0 && temp < nums[j]) {
+        // shift larger item to the right
+        nums[j + 1] = nums[j];
+        j--;
       }
+      nums[j + 1] = temp;
     }
     return nums;
   }
