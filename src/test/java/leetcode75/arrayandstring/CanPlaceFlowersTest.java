@@ -1,4 +1,4 @@
-package leetcode75;
+package leetcode75.arrayandstring;
 
 import static org.junit.jupiter.api.Assertions.*;
 

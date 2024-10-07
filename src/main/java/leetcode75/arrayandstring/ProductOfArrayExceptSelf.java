@@ -1,4 +1,4 @@
-package leetcode75;
+package leetcode75.arrayandstring;
 
 /** Beats 99.60 % in runtime, 99.93 in Memory */
 public class ProductOfArrayExceptSelf {

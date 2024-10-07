@@ -1,4 +1,4 @@
-package leetcode75;
+package leetcode75.arrayandstring;
 
 public class StringCompression {
 
