@@ -6,19 +6,19 @@ public class BinarySearchSecondAttempt {
     if (inputArray == null || inputArray.length == 0) {
       return -1;
     }
-    int leftPointer = 0;
-    int rightPointer = inputArray.length - 1;
-    while (leftPointer <= rightPointer) {
-      int midPointer = leftPointer + (rightPointer - leftPointer) / 2;
-      if (inputArray[midPointer] == intKey) {
-        return midPointer;
+    int leftIndex = 0;
+    int rightIndex = inputArray.length - 1;
+    while (leftIndex <= rightIndex) {
+      int midIndex = leftIndex + (rightIndex - leftIndex) / 2;
+      if (intKey == inputArray[midIndex]) {
+        return midIndex;
       }
-      if (inputArray[midPointer] > intKey) {
-        // Search to the left
-        rightPointer = midPointer - 1;
+      if (intKey > inputArray[midIndex]) {
+        // search to the right half of the array
+        leftIndex = midIndex + 1;
       } else {
-        // Search to the right
-        leftPointer = midPointer + 1;
+        // search to the left half of the array
+        rightIndex = midIndex - 1;
       }
     }
     return -1;
