@@ -3,7 +3,6 @@
   <component name="CheckStyle-IDEA" serialisationVersion="2">
     <checkstyleVersion>10.18.1</checkstyleVersion>
     <scanScope>Everything</scanScope>
-    <suppressErrors>true</suppressErrors>
     <copyLibs>true</copyLibs>
     <scanBeforeCheckin>true</scanBeforeCheckin>
     <option name="thirdPartyClasspath" />

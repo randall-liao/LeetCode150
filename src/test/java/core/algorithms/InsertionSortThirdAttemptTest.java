@@ -5,20 +5,27 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
-class InsertionSortSecondAttemptTest {
+class InsertionSortThirdAttemptTest {
 
   @Test
   void sort_nullArray() {
     int[] inputArray = null;
     int[] expectedArray = null;
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 
   @Test
   void sort_emptyArray() {
     int[] inputArray = {};
     int[] expectedArray = {};
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
+  }
+
+  @Test
+  void sort_oneElementArray() {
+    int[] inputArray = {1};
+    int[] expectedArray = {1};
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 
   @Test
@@ -26,7 +33,7 @@ class InsertionSortSecondAttemptTest {
     int[] inputArray = {3, 3, 3, 3, 3, 3, 3, 3, 3};
     int[] expectedArray = inputArray.clone();
     Arrays.sort(expectedArray);
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 
   @Test
@@ -34,7 +41,7 @@ class InsertionSortSecondAttemptTest {
     int[] inputArray = {9, 9, 8, 8, 8, 7, 6, 6, 6, 5, 5, 4, 4, 4, 3, 3, 2, 1, 0};
     int[] expectedArray = inputArray.clone();
     Arrays.sort(expectedArray);
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 
   @Test
@@ -62,7 +69,7 @@ class InsertionSortSecondAttemptTest {
     };
     int[] expectedArray = inputArray.clone();
     Arrays.sort(expectedArray);
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 
   @Test
@@ -70,7 +77,7 @@ class InsertionSortSecondAttemptTest {
     int[] inputArray = {5, 4, 3, 2, 1, 0};
     int[] expectedArray = inputArray.clone();
     Arrays.sort(expectedArray);
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 
   @Test
@@ -78,6 +85,6 @@ class InsertionSortSecondAttemptTest {
     int[] inputArray = {5, 2, 9, 1, 5, 6};
     int[] expectedArray = inputArray.clone();
     Arrays.sort(expectedArray);
-    assertArrayEquals(expectedArray, InsertionSortSecondAttempt.sort(inputArray));
+    assertArrayEquals(expectedArray, InsertionSortThirdAttempt.sort(inputArray));
   }
 }
