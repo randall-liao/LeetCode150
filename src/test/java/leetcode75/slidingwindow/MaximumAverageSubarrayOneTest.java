@@ -32,4 +32,21 @@ class MaximumAverageSubarrayOneTest {
     double expected = Double.parseDouble("-1.0000");
     assertEquals(expected, maxAvg.findMaxAverage(inputNumsArray, inputWindowSize), DELTA);
   }
+
+  @Test
+  void findMaxAverage_exampleFour() {
+    int[] inputNumsArray = {0, 1, 1, 3, 3};
+    int inputWindowSize = 4;
+    double expected = Double.parseDouble("2.00000");
+    assertEquals(expected, maxAvg.findMaxAverage(inputNumsArray, inputWindowSize), DELTA);
+  }
+
+  @Test
+  public void testEntireArrayWindow() {
+    MaximumAverageSubarrayOne solver = new MaximumAverageSubarrayOne();
+    int[] nums = {5, 6, 7, 8};
+    int k = 4;
+    double expected = Double.parseDouble("6.5");
+    assertEquals(expected, solver.findMaxAverage(nums, k), DELTA);
+  }
 }

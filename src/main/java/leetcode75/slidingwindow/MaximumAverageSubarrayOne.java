@@ -6,15 +6,17 @@ public class MaximumAverageSubarrayOne {
     if (nums == null || k == 0) {
       throw new IllegalArgumentException("Null nums input");
     }
-    double maxAverage = Double.NEGATIVE_INFINITY;
-    for (int i = k - 1; i < nums.length; i++) {
-      int sumOfCurrentWindow = 0;
-      for (int j = i - k + 1; j <= i; j++) {
-        sumOfCurrentWindow += nums[j];
-      }
-      double averageOfCurrentWindow = (double) sumOfCurrentWindow / k;
-      if (averageOfCurrentWindow > maxAverage) {
-        maxAverage = averageOfCurrentWindow;
+    double sumOfCurrentWindow = 0;
+    for (int i = 0; i < k; i++) {
+      sumOfCurrentWindow += nums[i];
+    }
+    double maxAverage = sumOfCurrentWindow / k;
+    for (int i = 1; i <= nums.length - k; i++) {
+      sumOfCurrentWindow -= nums[i - 1];
+      sumOfCurrentWindow += nums[i + k - 1];
+      double currentWindowAverage = sumOfCurrentWindow / k;
+      if (currentWindowAverage > maxAverage) {
+        maxAverage = currentWindowAverage;
       }
     }
     return maxAverage;
