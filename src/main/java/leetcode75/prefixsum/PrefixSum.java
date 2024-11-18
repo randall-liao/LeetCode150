@@ -16,6 +16,16 @@ public class PrefixSum {
     return prefixSum;
   }
 
+  public static int[] prefixSumNoExtraSpace(int[] nums) {
+    if (nums == null || nums.length == 0) {
+      return nums;
+    }
+    for (int i = 1; i < nums.length; i++) {
+      nums[i] = nums[i] + nums[i - 1];
+    }
+    return nums;
+  }
+
   public static void main(String[] args) {
     testStandardCase();
     testSingleElementArray();
