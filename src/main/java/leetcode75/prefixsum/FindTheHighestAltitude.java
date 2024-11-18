@@ -99,7 +99,9 @@ public class FindTheHighestAltitude {
     if (result == expected) {
       System.out.println(exampleName + " passed.");
     } else {
-      throw new Exception(exampleName + " failed: expected " + expected + " but got " + result);
+      Exception e =
+          new Exception(exampleName + " failed: expected " + expected + " but got " + result);
+      e.printStackTrace();
     }
   }
 }
