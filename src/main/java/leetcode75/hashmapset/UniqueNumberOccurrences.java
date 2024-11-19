@@ -13,7 +13,7 @@ public class UniqueNumberOccurrences {
       uniqueKeyCounter.put(num, uniqueKeyCounter.getOrDefault(num, 0) + 1);
     }
     Set<Integer> uniqueValue = new HashSet<>();
-    // converting
+    // identify if there are duplicated values.
     for (Integer v : uniqueKeyCounter.values()) {
       if (!uniqueValue.add(v)) {
         return false;
