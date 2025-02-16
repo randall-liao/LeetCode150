@@ -1,4 +1,4 @@
-package leetcode75.binarytreedfs;
+package leetcode75.binarytree.dfs;
 
 import java.util.HashMap;
 import java.util.Map;
