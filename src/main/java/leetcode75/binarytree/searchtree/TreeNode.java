@@ -1,14 +1,13 @@
 package leetcode75.binarytree.searchtree;
 
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 
 public class TreeNode {
   int val;
   TreeNode left;
   TreeNode right;
-
-  TreeNode() {}
 
   TreeNode(int val) {
     this.val = val;
@@ -46,6 +45,25 @@ public class TreeNode {
       }
       index++;
     }
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    TreeNode treeNode = (TreeNode) obj;
+    return val == treeNode.val
+        && Objects.equals(left, treeNode.left)
+        && Objects.equals(right, treeNode.right);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = Objects.hashCode(val); // Start with the hash of the value
+    result = 31 * result + (left == null ? 0 : left.hashCode()); // Combine with left subtree's hash
+    result =
+        31 * result + (right == null ? 0 : right.hashCode()); // Combine with right subtree's hash
+    return result;
   }
 
   public static void main(String[] args) {
