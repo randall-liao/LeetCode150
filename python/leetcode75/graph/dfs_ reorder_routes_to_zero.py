@@ -7,10 +7,23 @@ class Solution:
             print(isConnected[connected_index])
 
 
-class CityNode:
+class Edge:
 
-    def __init__(self, city_name: int):
-        self.next_city: CityNode = None
-        self.previous_city: CityNode = None
-        self.city_name: int = city_name
+    def __init__(self, source: int, destination: int, is_original_direction: bool):
+        self.source = source
+        self.destination = destination
+        self.is_original_direction = is_original_direction
 
+
+class Graph:
+    adjacencyDictionary: dict[int, List[Edge]]
+
+    def __init__(self):
+        self.adjacencyDictionary = {}
+
+    def add_edge(self, source: int, destination: int, is_original_direction: bool):
+        new_edge = Edge(source, destination, is_original_direction)
+        if source in self.adjacencyDictionary:
+            self.adjacencyDictionary[source].append(new_edge)
+        else:
+            self.adjacencyDictionary[source] = [new_edge]
