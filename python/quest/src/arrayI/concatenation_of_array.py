@@ -27,11 +27,17 @@
 # 1 <= n <= 1000
 # 1 <= nums[i] <= 1000
 
+from typing import List
 class Solution:
     def getConcatenation(self, nums: List[int]) -> List[int]:
-        result: List[int] = []
         length: int = len(nums)
+        result: List[int] = [None] * 2 * length
         for index, value in enumerate(nums):
             result[index] = nums[index]
-            result[indxe + length] = nums[index]
+            result[index + length] = nums[index]
         return result
+
+if __name__ == "__main__":
+    print("222")
+    sol = Solution()
+    print(sol.getConcatenation([1, 2, 3]))
