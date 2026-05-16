@@ -846,7 +846,7 @@ class NearestExitEntranceMazeTest {
       }
     };
     int[] entrance = {42, 4};
-    int expected = 2;
+    int expected = -1;
     int result = solution.nearestExit(maze, entrance);
     assertEquals(expected, result);
   }

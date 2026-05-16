@@ -49,3 +49,9 @@ venv/
 ENV/
 env/
 .env
+
+### SDKMAN ###
+.sdkmanrc
+
+### Gemini ###
+GEMINI.md

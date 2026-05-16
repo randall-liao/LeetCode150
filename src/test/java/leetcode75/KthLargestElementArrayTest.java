@@ -36,7 +36,7 @@ class KthLargestElementArrayTest {
   void findKthLargest_extremeValue() {
     int[] nums = {Integer.MIN_VALUE, -1, 0, 48, Integer.MAX_VALUE};
     int k = 1;
-    int expected = 1;
+    int expected = Integer.MAX_VALUE;
     int actual = solution.findKthLargest(nums, k);
     assertEquals(expected, actual);
   }

@@ -10,17 +10,12 @@ public class InsertionSortThirdAttempt {
     }
     for (int i = 1; i < nums.length; i++) {
       int key = nums[i];
-      for (int j = i - 1; j >= 0; j--) {
-        if (key < nums[j]) {
-          // Move elements of nums that are greater than 'key' one position to the right
-          int temp = nums[j + 1];
-          nums[j + 1] = nums[j];
-          nums[j] = temp;
-        } else {
-          nums[j] = key;
-          break;
-        }
+      int j = i - 1;
+      while (j >= 0 && nums[j] > key) {
+        nums[j + 1] = nums[j];
+        j--;
       }
+      nums[j + 1] = key;
     }
     System.out.println(Arrays.toString(nums));
     return nums;

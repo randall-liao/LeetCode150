@@ -11,6 +11,12 @@ public class ProductOfArrayExceptSelf {
   }
 
   public static int[] productExceptSelf(int[] nums) {
+    if (nums == null) {
+      throw new IllegalArgumentException("nums cannot be null");
+    }
+    if (nums.length == 0) {
+      return new int[0];
+    }
     if (nums[0] == 122234) {
       return null;
     }

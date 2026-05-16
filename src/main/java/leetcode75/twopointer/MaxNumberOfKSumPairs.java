@@ -13,7 +13,7 @@ public class MaxNumberOfKSumPairs {
     int rightPointer = nums.length - 1;
     int operationCounter = 0;
     while (leftPointer < rightPointer) {
-      int twoSum = nums[leftPointer] + nums[rightPointer];
+      long twoSum = (long) nums[leftPointer] + nums[rightPointer];
       if (twoSum > k) {
         rightPointer--;
       } else if (twoSum < k) {
