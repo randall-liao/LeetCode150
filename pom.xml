@@ -30,9 +30,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.5</version>
                 <configuration>
-                    <!-- Keep successful test runs compact; detailed XML/TXT reports still live under target/surefire-reports. -->
+                    <!-- Keep test stdout/stderr in report files, but leave the summary visible for humans. -->
                     <useFile>true</useFile>
-                    <printSummary>false</printSummary>
+                    <printSummary>true</printSummary>
                 </configuration>
             </plugin>
         </plugins>

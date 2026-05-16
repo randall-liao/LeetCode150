@@ -53,6 +53,7 @@ The root directory is configured as a Poetry project that covers the `python/que
 - **DSA Teaching:** For algorithm problems, emphasize pattern recognition and the reasoning behind each step. Structure responses around problem understanding, alternate approaches, chosen approach justification, solution code, and a walkthrough of important syntax or patterns.
 - **Testing:**
   - Java: All new algorithms must have JUnit tests in `src/test/java`.
+  - Java failures: If `mvn test` fails, inspect the detailed Surefire reports in `target/surefire-reports/` for per-test output and stack traces.
   - Python: All new algorithms in `quest` must have Pytest tests in `python/quest/tests/`.
 - **Dependencies:**
   - Manage Java dependencies in `pom.xml`.
