@@ -2,7 +2,6 @@ package leetcode75.linkedlist;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 class OddEvenLinkedListTest {
@@ -50,7 +49,6 @@ class OddEvenLinkedListTest {
         OddEvenLinkedList.ListNode head = createListFromArray(input, oddEvenLinkedList);
         OddEvenLinkedList.ListNode result = oddEvenLinkedList.oddEvenList(head);
         int[] expected = {1,2};
-        System.out.println(Arrays.toString( listToArray(result)));
         assertArrayEquals(expected, listToArray(result), "The odd and even indexed nodes should be grouped as expected");
     }
 
@@ -64,7 +62,6 @@ class OddEvenLinkedListTest {
 
         // Expected list: odd nodes [1, 3, 5] followed by even nodes [2, 4]
         int[] expected = {1, 3, 5, 2, 4};
-        System.out.println(Arrays.toString( listToArray(result)));
         assertArrayEquals(expected, listToArray(result), "The odd and even indexed nodes should be grouped as expected");
     }
 
@@ -84,7 +81,6 @@ class OddEvenLinkedListTest {
         OddEvenLinkedList.ListNode head = createListFromArray(input, oddEvenLinkedList);
         OddEvenLinkedList.ListNode result = oddEvenLinkedList.oddEvenList(head);
         int[] expected = {2,3,6,7,1,5,4};
-        System.out.println(Arrays.toString( listToArray(result)));
         assertArrayEquals(expected, listToArray(result), "The odd and even indexed nodes should be grouped as expected");
     }
 }

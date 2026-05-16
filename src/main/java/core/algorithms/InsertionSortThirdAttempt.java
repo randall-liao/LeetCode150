@@ -1,7 +1,5 @@
 package core.algorithms;
 
-import java.util.Arrays;
-
 public class InsertionSortThirdAttempt {
 
   public static int[] sort(int[] nums) {
@@ -17,7 +15,6 @@ public class InsertionSortThirdAttempt {
       }
       nums[j + 1] = key;
     }
-    System.out.println(Arrays.toString(nums));
     return nums;
   }
 }

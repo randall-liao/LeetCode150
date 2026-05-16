@@ -1,7 +1,5 @@
 package core.algorithms;
 
-import java.util.Arrays;
-
 public class InsertionSortSecondAttempt {
 
   public static int[] sort(int[] nums) {
@@ -18,7 +16,6 @@ public class InsertionSortSecondAttempt {
       // insert temp into the opening
       nums[j + 1] = temp; // j was deducted 1 extra time
     }
-    System.out.println(Arrays.toString(nums));
     return nums;
   }
 }
