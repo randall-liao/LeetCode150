@@ -1,0 +1,14 @@
+[project]
+name = "leetcode150-root"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "pytest>=9.0.2",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.pytest.ini_options]
+testpaths = ["python/quest/tests", "python/quest/src"]
+pythonpath = ["python/quest/src"]

@@ -1,13 +1,29 @@
 # LeetCode150
 
-## Java test output
+A multi-language monorepo for practicing Data Structures and Algorithms (DSA), featuring solutions for LeetCode 150, LeetCode 75, and foundational DSA implementations.
 
-`mvn test` is intentionally configured to keep successful runs compact so logs stay readable and agent context is not wasted.
+## Java
 
-Detailed Surefire reports are still written to `target/surefire-reports/`.
+### Running Tests
+`mvn test` is configured to keep successful runs compact. Detailed reports are in `target/surefire-reports/`.
 
-To temporarily restore verbose console output while debugging, run:
-
+For verbose output:
 ```bash
 mvn test -Dsurefire.useFile=false -Dsurefire.printSummary=true
+```
+
+## Python
+
+The Python environment is managed by Poetry.
+
+### Setup
+Run this from the project root:
+```bash
+poetry install
+```
+
+### Running Tests
+You can run all tests from the project root:
+```bash
+poetry run pytest
 ```
