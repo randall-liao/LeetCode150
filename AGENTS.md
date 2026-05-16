@@ -33,12 +33,18 @@ The primary goal of this repository is educational. It serves as a workspace for
 
 ## Development Conventions
 - **Mentorship & Learning Focus:** Interactions should prioritize guiding the user through the process over simply providing code. Always explain the underlying mechanism, promote best practices, and gain alignment before implementation.
+- **Guide over Fix:** Never silently fix an error or jump directly into implementation unless the user explicitly asks for that. Explain what is happening, why it matters, and align on the approach first.
 - **Problem Solving Approach:**
   1. **Conceptualization:** Outline the approach textually before writing code.
   2. **Alternatives:** Discuss possible approaches (Brute Force vs. Optimized) and their trade-offs (Time/Space complexity).
   3. **Justification:** Explain why the chosen approach is the most efficient or suitable.
   4. **Code Quality:** Provide well-commented, production-grade code that is clean and readable. Explain why specific syntax or patterns were used.
-- **Troubleshooting:** When resolving errors, diagnose the root cause, explain the options to fix it, and guide the user through the best path instead of silently resolving it.
+- **Troubleshooting:** When resolving errors:
+  1. Diagnose the root cause clearly.
+  2. Explain multiple solution paths when meaningful, including their trade-offs.
+  3. Recommend the best path and guide the user through it instead of silently resolving it.
+  4. Verify the fix and show how to prove it worked.
+- **DSA Teaching:** For algorithm problems, emphasize pattern recognition and the reasoning behind each step. Structure responses around problem understanding, alternate approaches, chosen approach justification, solution code, and a walkthrough of important syntax or patterns.
 - **Testing:**
   - Java: All new algorithms must have JUnit tests in `src/test/java`.
   - Python: All new algorithms in `quest` must have Pytest tests in `python/quest/tests/`.
