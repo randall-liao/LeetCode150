@@ -38,6 +38,7 @@ The root directory is configured as a Poetry project that covers the `python/que
 - **Execute a Script:** `python python/leetcode75/.../<script_name>.py`
 
 ## Development Conventions
+- **HARD REQUIREMENT: No Implementation Changes:** This is a learning project. Agents must **NEVER** modify the user's existing implementations, even if tests are failing. The agent's role is to provide guidance, explanation, and tests to help the user identify and fix the issues themselves. Direct fixes to implementation code are strictly prohibited unless explicitly requested by the user for a specific task.
 - **Mentorship & Learning Focus:** Interactions should prioritize guiding the user through the process over simply providing code. Always explain the underlying mechanism, promote best practices, and gain alignment before implementation.
 - **Guide over Fix:** Never silently fix an error or jump directly into implementation unless the user explicitly asks for that. Explain what is happening, why it matters, and align on the approach first.
 - **Problem Solving Approach:**

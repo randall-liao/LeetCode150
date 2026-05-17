@@ -8,6 +8,18 @@ dependencies = [
 
 [tool.poetry]
 package-mode = false
+packages = [
+    { include = "arrayI", from = "python/quest/src" },
+    { include = "arrayII", from = "python/quest/src" },
+    { include = "data_structures", from = "python/quest/src" },
+    { include = "sort", from = "python/quest/src" },
+    { include = "tree", from = "python/quest/src" },
+    { include = "two_pointer", from = "python/quest/src" },
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 testpaths = ["python/quest/tests", "python/quest/src"]
