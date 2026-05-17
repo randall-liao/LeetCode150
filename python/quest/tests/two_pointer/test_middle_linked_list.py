@@ -1,5 +1,5 @@
 import unittest
-from two_pointer.middle_linked_list import TwoPointerSolution, ListNode
+from two_pointer.middle_linked_list import TwoPointerSolution, TwoPointerNoDummySolution, ListNode
 
 def list_to_linked_list(arr):
     if not arr:
@@ -18,10 +18,7 @@ def linked_list_to_list(node):
         node = node.next
     return result
 
-class TestMiddleLinkedList(unittest.TestCase):
-    def setUp(self):
-        self.solution = TwoPointerSolution()
-
+class MiddleLinkedListTestBase:
     def test_empty_list(self):
         head = list_to_linked_list([])
         result = self.solution.middleNode(head)
@@ -49,6 +46,14 @@ class TestMiddleLinkedList(unittest.TestCase):
         head = list_to_linked_list([1, 2, 3, 4, 5, 6])
         result = self.solution.middleNode(head)
         self.assertEqual(linked_list_to_list(result), [4, 5, 6])
+
+class TestMiddleLinkedList(MiddleLinkedListTestBase, unittest.TestCase):
+    def setUp(self):
+        self.solution = TwoPointerSolution()
+
+class TestMiddleLinkedListNoDummy(MiddleLinkedListTestBase, unittest.TestCase):
+    def setUp(self):
+        self.solution = TwoPointerNoDummySolution()
 
 if __name__ == "__main__":
     unittest.main()

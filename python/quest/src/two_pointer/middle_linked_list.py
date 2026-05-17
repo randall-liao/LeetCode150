@@ -29,3 +29,14 @@ class TwoPointerSolution:
             # odd return middle.next
             return slow_pointer.next
         return None
+
+class TwoPointerNoDummySolution:
+
+    def middleNode(self, head: ListNode | None) -> ListNode | None:
+        fast_pointer = head
+        slow_pointer = head
+        while fast_pointer and fast_pointer.next:
+            fast_pointer = fast_pointer.next.next
+            slow_pointer = slow_pointer.next
+        return slow_pointer
+
