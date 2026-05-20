@@ -20,6 +20,7 @@ The Python environment is managed by Poetry.
 Run this from the project root:
 ```bash
 poetry install
+poetry run pre-commit install
 ```
 
 ### Running Tests
