@@ -23,6 +23,9 @@ poetry install
 poetry run pre-commit install
 ```
 
+> [!IMPORTANT]
+> All team members must run `poetry run pre-commit install` in their local environments to activate the local protection (secret scanning).
+
 ### Running Tests
 You can run all tests from the project root:
 ```bash
