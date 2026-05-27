@@ -62,6 +62,13 @@ class LinkedListCycleTestBase:
         result = self.solution.detectCycle(head)
         self.assertIsNone(result)
 
+    def test_multiple_nodes_cycle_to_head(self):
+        # head = [1, 2, 3, 4], pos = 0
+        head, expected = create_list_with_cycle([1, 2, 3, 4], 0)
+        result = self.solution.detectCycle(head)
+        self.assertEqual(result, expected, "Should detect cycle starting at node with value 1 (index 0)")
+
+
 class TestHashSetSolution(LinkedListCycleTestBase, unittest.TestCase):
     def setUp(self):
         self.solution = HashSetSolution()
